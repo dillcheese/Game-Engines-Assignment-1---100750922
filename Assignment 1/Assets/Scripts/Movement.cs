@@ -59,7 +59,7 @@ public class Movement : MonoBehaviour
             rb.AddForce(Physics.gravity * gravity, ForceMode.Acceleration);
         }
         //if (won)
-           // Debug.LogError("WIN");
+        // Debug.LogError("WIN");
     }
 
     private void OnCollisionEnter(Collision other)

@@ -1,32 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Winner : MonoBehaviour
 {
     public Text myText;
-    public bool texting=false;
-  
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool texting = false;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (texting)
         {
             myText.text = " YOU WON";
         }
-        
     }
 
     private void OnCollisionEnter(Collision other)
     {
-       
         Movement win = other.gameObject.GetComponent<Movement>();
         if (win)
         {
@@ -34,5 +24,4 @@ public class Winner : MonoBehaviour
             Debug.Log("WINNIG");
         }
     }
-
 }
