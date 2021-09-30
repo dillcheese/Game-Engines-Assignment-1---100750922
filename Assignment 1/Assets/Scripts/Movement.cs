@@ -5,12 +5,13 @@ public class Movement : MonoBehaviour
     //variables
     private Rigidbody rb;
 
-    public float speed = 5f;
-    public float jumpForce = 12f;
+    public float speed = 8f;
+    public float jumpForce = 16f;
     public float gravity = 6f;
     public float lookSpeed = 5f;
 
     private bool isGrounded = false;
+    private bool won = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -57,9 +58,26 @@ public class Movement : MonoBehaviour
         {
             rb.AddForce(Physics.gravity * gravity, ForceMode.Acceleration);
         }
+        //if (won)
+           // Debug.LogError("WIN");
     }
 
     private void OnCollisionEnter(Collision other)
+    {
+        Floor ground = other.gameObject.GetComponent<Floor>();
+        if (ground)
+        {
+            isGrounded = true;
+        }
+
+        Winner win = other.gameObject.GetComponent<Winner>();
+        if (win)
+        {
+            won = true;
+        }
+    }
+
+    private void OnCollisionStay(Collision other)
     {
         Floor ground = other.gameObject.GetComponent<Floor>();
         if (ground)
