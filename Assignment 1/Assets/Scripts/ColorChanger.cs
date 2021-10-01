@@ -10,11 +10,7 @@ public class ColorChanger : MonoBehaviour
     private void Start()
     {
         mat = GetComponent<Renderer>().material;
-        Color background = new Color(
-   Random.Range(0f, 1f),
-   Random.Range(0f, 1f),
-   Random.Range(0f, 1f)
-);
+      
         rand = Random.ColorHSV();
         rand2 = Random.ColorHSV();
     }

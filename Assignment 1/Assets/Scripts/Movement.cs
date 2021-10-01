@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     public float lookSpeed = 5f;
 
     private bool isGrounded = false;
-    private bool won = false;
+    //private bool won = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -73,7 +73,7 @@ public class Movement : MonoBehaviour
         Winner win = other.gameObject.GetComponent<Winner>();
         if (win)
         {
-            won = true;
+            //won = true;
         }
     }
 
