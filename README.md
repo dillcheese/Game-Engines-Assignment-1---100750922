@@ -4,5 +4,6 @@ My game project will be a simple platformer game, where the player has to jump t
 
 UML Diagram for my game:
 
-![image](https://user-images.githubusercontent.com/9836085/135547677-11bc9fbe-d031-4dc7-9d85-7630f4cf7457.png)
+![image](https://user-images.githubusercontent.com/9836085/135548888-dfe62edb-b0c9-4214-878e-9df1906478e4.png)
+
 
