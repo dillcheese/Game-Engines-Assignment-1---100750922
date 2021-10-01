@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
     private Rigidbody rb;
 
     public float speed = 8f;
-    public float jumpForce = 16f;
+    public float jumpForce = 18f;
     public float gravity = 6f;
     public float lookSpeed = 5f;
 
