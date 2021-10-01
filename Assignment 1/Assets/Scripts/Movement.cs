@@ -79,6 +79,7 @@ public class Movement : MonoBehaviour
         {
             won = true;
             //win con screen
+            //from https://answers.unity.com/questions/747872/freeze-rigidbody-position-in-script.html
             rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ
                 | RigidbodyConstraints.FreezeRotation;
         }
