@@ -6,7 +6,9 @@ My game project will be a simple platformer game, where the player has to jump t
 THIRD PARTY SOURCES: 
 
 
-The only 3rd party sources I used were the ones from this class. Specifically the lab where the TA taught us how to make and import a DLL to Unity.
+The 3rd party sources I used were the ones from this class. Specifically the lab where the TA taught us how to make and import a DLL to Unity.
+
+I also used this site: https://www.daniweb.com/programming/software-development/tutorials/1769/c-random-numbers to specifically the "srand((unsigned)time(0)); " piece of code to generate random numbers that don't repeat.
 
 
 
