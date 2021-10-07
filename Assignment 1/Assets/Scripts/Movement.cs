@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
     private Rigidbody rb;
 
     public float speed = 8f;
-    public float jumpForce = 17f;
+    public float jumpForce = 22f;
     public float gravity = 6f;
     public float lookSpeed = 5f;
 
@@ -45,23 +45,23 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         //put physics, function called every number of seconds
-       
-            float dirX = Input.GetAxis("Horizontal") * speed;
-            float dirZ = Input.GetAxis("Vertical") * speed;
 
-            Vector3 moveDir = new Vector3(dirX, 0f, dirZ);
-            // makes it so that 'forward' changes based on your camera is looking
-            moveDir = Camera.main.transform.TransformDirection(moveDir);
-            //moveDir.y = 0f;
-            moveDir.y = rb.velocity.y;
-            //rb.AddForce(moveDir * speed);
-            rb.velocity = moveDir;
+        float dirX = Input.GetAxis("Horizontal") * speed;
+        float dirZ = Input.GetAxis("Vertical") * speed;
 
-            if (!isGrounded)
-            {
-                rb.AddForce(Physics.gravity * gravity, ForceMode.Acceleration);
-            }
-        
+        Vector3 moveDir = new Vector3(dirX, 0f, dirZ);
+        // makes it so that 'forward' changes based on your camera is looking
+        moveDir = Camera.main.transform.TransformDirection(moveDir);
+        //moveDir.y = 0f;
+        moveDir.y = rb.velocity.y;
+        //rb.AddForce(moveDir * speed);
+        rb.velocity = moveDir;
+
+        if (!isGrounded)
+        {
+            rb.AddForce(Physics.gravity * gravity, ForceMode.Acceleration);
+        }
+
         //if (won)
         // Debug.LogError("WIN");
     }
